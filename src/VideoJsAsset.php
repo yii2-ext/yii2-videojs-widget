@@ -14,7 +14,7 @@ namespace wbraganca\videojs;
  */
 class VideoJsAsset extends \yii\web\AssetBundle
 {
-    public $sourcePath = '@bower/video.js/dist';
+    public $sourcePath = '@npm/video.js/dist';
 
     public $css = [
         'video-js.min.css',

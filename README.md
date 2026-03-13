@@ -15,13 +15,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist wbraganca/yii2-videojs-widget "~1.0"
+php composer.phar require --prefer-dist wbraganca/yii2-videojs-widget "^2.0"
 ```
 
 or add
 
 ```
-"wbraganca/yii2-videojs-widget": "~1.0"
+"wbraganca/yii2-videojs-widget": "^2.0"
 ```
 
 to the require section of your `composer.json` file.
@@ -36,8 +36,8 @@ Example 1 - HTML5
 <?php
     echo \wbraganca\videojs\VideoJsWidget::widget([
         'options' => [
-            'class' => 'video-js vjs-default-skin vjs-big-play-centered',
-            'poster' => "http://www.videojs.com/img/poster.jpg",
+            'class' => 'video-js vjs-big-play-centered',
+            'poster' => "https://videojs.com/img/poster.jpg",
             'controls' => true,
             'preload' => 'auto',
             'width' => '970',
@@ -45,39 +45,11 @@ Example 1 - HTML5
         ],
         'tags' => [
             'source' => [
-                ['src' => 'http://vjs.zencdn.net/v/oceans.mp4', 'type' => 'video/mp4'],
-                ['src' => 'http://vjs.zencdn.net/v/oceans.webm', 'type' => 'video/webm']
+                ['src' => 'https://vjs.zencdn.net/v/oceans.mp4', 'type' => 'video/mp4'],
+                ['src' => 'https://vjs.zencdn.net/v/oceans.webm', 'type' => 'video/webm']
             ],
             'track' => [
-                ['kind' => 'captions', 'src' => 'http://vjs.zencdn.net/vtt/captions.vtt', 'srclang' => 'en', 'label' => 'English']
-            ]
-        ]
-    ]);
-?>
-
-```
-
-Example 2 - Real Time Messaging Protocol (RTMP)
-
-```php
-<?php
-    echo \wbraganca\videojs\VideoJsWidget::widget([
-        'options' => [
-            'class' => 'video-js vjs-default-skin vjs-big-play-centered',
-            'controls' => true,
-            'preload' => 'auto',
-            'width' => '420',
-            'height' => '315',
-            'data' => [
-                'setup' => [
-                    'autoplay' => true,
-                    'techOrder' =>['flash', 'html5']
-                ],
-            ],
-        ],
-        'tags' => [
-            'source' => [
-                ['src' => 'rtmp://cp67126.edgefcs.net/ondemand/&mp4:mediapm/ovp/content/test/video/spacealonehd_sounas_640_300.mp4', 'type' => 'rtmp/mp4']
+                ['kind' => 'captions', 'src' => 'https://vjs.zencdn.net/vtt/captions.vtt', 'srclang' => 'en', 'label' => 'English']
             ]
         ]
     ]);
